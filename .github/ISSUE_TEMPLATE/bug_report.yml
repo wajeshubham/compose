@@ -1,49 +1,68 @@
-name: 🐞 Bug
-description: File a bug/issue
-title: "[BUG] <title>"
-labels: ['status/0-triage', 'kind/bug']
+name: Bug report
+about: Create a report to help us improve
+title: "BUG: <title>"
+
+labels:
+  - bug
+
 body:
   - type: textarea
+    id: bug_description
     attributes:
-      label: Description
-      description: |
-        Briefly describe the problem you are having.
-
-        Include both the current behavior (what you are seeing) as well as what you expected to happen.
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
     validations:
       required: true
-  - type: textarea
-    attributes:
-      label: Steps To Reproduce
-      description: Steps to reproduce the behavior.
-      placeholder: |
-        1. In this environment...
-        2. With this config...
-        3. Run '...'
-        4. See error...
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: Compose Version
-      description: |
-        Paste output of `docker compose version` and `docker-compose version`.
-      render: Text
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: Docker Environment
-      description: Paste output of `docker info`.
-      render: Text
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: Anything else?
-      description: |
-        Links? References? Anything that will give us more context about the issue you are encountering!
 
-        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+  - type: textarea
+    id: reproduce_steps
+    attributes:
+      label: To Reproduce
+      description: Steps to reproduce the behavior.
     validations:
       required: false
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+
+  - type: input
+    id: os_info
+    attributes:
+      label: OS
+      description: Operating System information (e.g., iOS).
+    validations:
+      required: false
+
+  - type: input
+    id: client_info
+    attributes:
+      label: Client
+      description: Client information (e.g., postman, thunder client, chrome, safari).
+    validations:
+      required: false
+
+  - type: input
+    id: version_info
+    attributes:
+      label: Version
+      description: Version information (e.g., 22).
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context or Information
+      description: Add any other context or any other information about the problem here.
+
