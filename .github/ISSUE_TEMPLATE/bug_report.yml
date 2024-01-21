@@ -41,6 +41,16 @@ body:
     attributes:
       label: OS
       description: Operating System information (e.g., iOS).
+      placeholder: MacOS
+    validations:
+      required: false
+      
+  - type: input
+    id: version_info
+    attributes:
+      label: OS Version
+      description: OS Version information.
+      placeholder: "13.1"
     validations:
       required: false
 
@@ -49,16 +59,11 @@ body:
     attributes:
       label: Client
       description: Client information (e.g., postman, thunder client, chrome, safari).
+      placeholder: Postman
     validations:
       required: false
 
-  - type: input
-    id: version_info
-    attributes:
-      label: Version
-      description: Version information (e.g., 22).
-    validations:
-      required: false
+
 
   - type: textarea
     id: additional_context
