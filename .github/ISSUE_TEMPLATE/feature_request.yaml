@@ -43,7 +43,7 @@ body:
     attributes:
       label: Built For Platform
       description: Specify the platform on which this application will run.
-      placeholder: `web`, `mobile`, `desktop`
+      placeholder: "`web`, `mobile`, `desktop`"
     validations:
       required: true
 
